@@ -101,6 +101,7 @@
 .collapse > input[type="checkbox"]:not(:checked) ~ .post #date{
 	float:left;
 	margin-right:2%;
+	margin-left:0%;
 }
 
 .collapse > input[type="checkbox"]:checked ~ .post #date{
