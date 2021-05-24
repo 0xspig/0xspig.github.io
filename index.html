@@ -1,7 +1,73 @@
 <html>
-  <head></head>
+  <head>
+  <link rel="stylesheet" href="style.css">
+  </head>
   <body>
-    <h1>Test</h1>
-    <p>Test paragraph</p>
+	<header>
+	<div>
+	<h1>0xspig.github.io</h1>
+	<p>Im just gonna dump my CSS-hacks here. If you see any JS on this site
+	you know the CIA got me.</p>
+	</div>
+	</header>
+
+	<br>
+
+	<h1>CSS-only Carousel</h1>
+ <div class="carousel" style="margin: 0 auto;">
+	<div class="gallery">
+		<input type="radio" id="img-1-radio" name="gallery" checked>
+		<a href="index.php" target="_blank"><img class="gallery-img" id="img-1" src="images/layfacedown.jpg"/></a>
+		<input type="radio" id="img-2-radio" name="gallery">
+		<a href="/index" target="_blank"><img class="gallery-img" id="img-2" src="images/ncwyeth-horse.jpg"/></a>
+
+		<input type="radio" id="img-3-radio" name="gallery" checked>
+		<a href="index.php" target="_blank"><img class="gallery-img" id="img-3" src="images/Dean_Cornwell_040.jpg"/></a>
+		<input type="radio" id="img-4-radio" name="gallery">
+		<a href="index.php" target="_blank"><img class="gallery-img" id="img-4" src="images/Sargent_-_Muddy_Alligators.jpg"/></a>
+
+		<input type="radio" id="img-5-radio" name="gallery" checked>
+		<a href="index.php" target="_blank"><img class="gallery-img" id="img-5" src="images/mitsukuni_defying_the_skeleton.jpg"/></a>
+		<input type="radio" id="img-6-radio" name="gallery">
+		<a href="index.php" target="_blank"><img class="gallery-img" id="img-6" src="images/John_singer_sargent-festa_della_regatta.jpeg"/></a>
+	</div>
+	
+	<nav class="nav">
+		<label class="nav-label" for="img-1-radio">
+			<img class="nav-img" src="images/layfacedown.jpg" alt="dean cornwell"/>
+		</label>
+		<label class="nav-label" for="img-2-radio">
+			<img class="nav-img" src="images/ncwyeth-horse.jpg" alt="nc wyeth"/>
+		</label>
+		
+		<label class="nav-label" for="img-3-radio">
+			<img class="nav-img" src="images/Dean_Cornwell_040.jpg" alt="dean cornwell"/>
+		</label>
+		<label class="nav-label" for="img-4-radio">
+			<img class="nav-img" src="images/Sargent_-_Muddy_Alligators.jpg" alt="muddy aligators"/>
+		</label>
+		<label class="nav-label" for="img-5-radio">
+			<img class="nav-img" src="images/mitsukuni_defying_the_skeleton.jpg" alt="mitsukuni_defying_the_skeleton"/>
+		</label>
+		<label class="nav-label" for="img-6-radio">
+			<img class="nav-img" src="images/John_singer_sargent-festa_della_regatta.jpeg" alt="JSS festa della regatta"/>
+		</label>
+	</nav>
+</div> //end of carousel
+
+<section class="collapse">
+	<input type="checkbox" name="collapse" id="POST_ID" checked>
+	<div class="post"> 
+		<h1><label for="POST_ID">
+			<div id="date">Sunday, May 23, 2021</div>
+			<div id="date">|</div>Collapsing Blog Post</label></h1>
+		<div class="post_body">
+			<p>This is where a blog post might be</p>
+			<p id=footnote><i>Published whenever<br>
+				Tagged: whatever stuff blog
+			<br><a href="#">Standalone</a>
+			</i></p></div></div>
+</section>
+
   </body>
 </html>

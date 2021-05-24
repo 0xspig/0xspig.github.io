@@ -1,0 +1,220 @@
+/*
+ * Carousel CSS
+ */
+
+.carousel{
+	position:relative;
+	display:block;
+	height:48em;
+	width:40em;
+	background:#010d17;
+}
+
+.carousel input[type="radio"]{
+	display:none;
+}
+
+.gallery {
+	width:100%;
+	height:80%;
+}
+
+/*
+ * Square images are ideal
+ * Object-fit should crop in new browsers though
+ */
+
+.gallery-img{
+	position:absolute;
+	left: 1em;
+	top: 1em;
+	width:38em;
+	height:38em;
+	object-fit:cover;
+	transition: opacity .5s;
+}
+
+.gallery > input[type="radio"]:checked + a .gallery-img {
+	z-index:100;
+	opacity:100%;
+}
+
+.gallery > input[type="radio"]:not(:checked) + a .gallery-img {
+	z-index:99;
+	opacity:0%;
+}
+
+.nav {
+	margin-top:1em;
+    	height:9em;
+	width: 38em;
+	margin-left:1em;
+    	text-align:center;
+	overflow:auto;
+	overflow-y:hidden;
+	white-space:nowrap;
+	--webkit-overflow-scrolling: touch;
+}
+
+.nav-img{
+	object-fit:cover;
+	display:block;
+	height: 7.5em;
+	width: 7.5em;
+	opacity: 75%;
+	transition: opacity .2s;
+	transition: height .4s;
+}
+
+.nav-img:hover{
+	height: 8em;
+	width: 8em;
+	opacity: 100%;
+}
+
+.nav-label {
+	display:inline-block;
+	height: 100%;
+	width:auto;
+}
+
+
+/*
+ *  Collapsable CSS
+ */
+.collapse > input[type=checkbox]{
+
+	position:absolute;
+	left: -100vw;
+}
+
+.collapse .post_body {
+	overflow-y: hidden;
+	height:0;
+}
+
+.collapse > input[type="checkbox"]:not(:checked) ~ .post h1{
+	font-size:14pt;
+	
+}
+
+.collapse > input[type="checkbox"]:not(:checked) ~ .post #date{
+	float:left;
+	margin-right:2%;
+}
+
+.collapse > input[type="checkbox"]:checked ~ .post #date{
+	height:0;
+	overflow:hidden;
+	display:none;
+}
+
+.collapse > input[type="checkbox"]:checked ~ .post .post_body{
+	height: auto;
+	overflow: visible;
+}
+
+.collapse label{
+	display:block;
+	transition: color .3s;
+}
+
+.collapse label:hover{
+	color: #5F7288;
+}
+
+/*
+ * General CSS
+ */
+
+header img{
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	padding-bottom:2%;
+	padding-top:2%;
+	max-height:140pt;
+	max-width:100%;
+	width:auto;
+}
+
+
+body {
+	background: linear-gradient(to top, #c38f51 20%, #faddba) no-repeat fixed;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+a {
+	color: #289081;
+	transition: color .6s;
+}
+
+a:hover{
+	color: #52f5a9;
+}
+
+h1 {
+	color: #500819;
+}
+
+h3{
+	text-align:center;
+	color: #5F7288;
+}
+
+main, div.post, div #box{
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:1em;
+	margin-bottom:1em;	
+	padding-left:1em;
+	padding-right:1em;
+	padding-top:.25em;
+	padding-bottom:.25em;
+	background:rgba(223,255,249, .18);
+	border: 2px solid #094f42;
+
+}
+
+#goto {
+	position: fixed;
+	bottom: .5em;
+	right:2em;
+}
+
+#donate {	
+	color:#023730;
+	margin:5%;
+	word-break:break-word;
+}
+
+@media (min-width: 850px) {
+	main , div.post{max-width:850px;}	
+	div.post img{max-width:800px; padding:inherit;}	
+	#blog-left{margin-left:10%; width:50%; float:left;}
+	#blog-right{width:18%;margin-right: 20%;float:right}
+	#blog-left img, #blog-right img{max-width:90%; display:block; margin-left:auto; margin-right:auto;}
+	#address-txt{
+		display:none;
+	}	
+}
+@media (max-width: 849px){
+	body{
+		font-size:small;
+	}
+	img{
+		height:unset;
+		width:100%;
+	}
+	#address-img{
+		display:none;
+	}	
+	#goto p{
+		padding-top:.15em;
+		padding-bottom:.15em;
+		padding-left: .5em;
+		padding-right: .5em;
+		background: #c38f51;
+	}
+}
+
